@@ -1,6 +1,6 @@
 //
 //  Pessoa.swift
-//  Aula6
+//  Pessoas
 //
 //  Created by Alliston Aleixo on 13/05/17.
 //  Copyright © 2017 Alliston Aleixo. All rights reserved.

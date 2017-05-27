@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */; };
 		A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B8A101EC74FCE00757419 /* Pessoa.swift */; };
 		A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD633F1EC2923A00C1C3E8 /* AppDelegate.swift */; };
 		A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD63411EC2923A00C1C3E8 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A58B8A101EC74FCE00757419 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
 		A5FD633C1EC2923A00C1C3E8 /* Pessoas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pessoas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FD633F1EC2923A00C1C3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +65,8 @@
 				A5FD63481EC2923A00C1C3E8 /* LaunchScreen.storyboard */,
 				A5FD634B1EC2923A00C1C3E8 /* Info.plist */,
 				A58B8A101EC74FCE00757419 /* Pessoa.swift */,
+				A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */,
 			);
-			name = Pessoas;
 			path = Pessoas;
 			sourceTree = "<group>";
 		};
@@ -140,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */,
 				A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */,
 				A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */,
 				A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */,

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Aula6
+//  Pessoas
 //
 //  Created by Alliston Aleixo on 09/05/17.
 //  Copyright © 2017 Alliston Aleixo. All rights reserved.
