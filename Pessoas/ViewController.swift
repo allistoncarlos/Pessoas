@@ -12,6 +12,7 @@ class ViewController: UIViewController,
     UIPickerViewDataSource,
     UIPickerViewDelegate,
     UITextFieldDelegate {
+    // MARK: - Outlets
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
@@ -20,6 +21,8 @@ class ViewController: UIViewController,
     @IBOutlet weak var operadora: UITextField!
     
     @IBOutlet weak var operadoraPicker: UIPickerView!
+    
+    // MARK: - Private Fields
     var pessoas: [Pessoa] = [Pessoa]()
     var operadoras = ["Claro", "Oi", "Tim", "Vivo"]
     
@@ -67,10 +70,6 @@ class ViewController: UIViewController,
 
     // MARK: - Custom Methods
     @IBAction func savePerson(_ sender: Any) {
-//        let alert = UIAlertController(title: "Confirme", message: "Deseja salvar a pessoa?", preferredStyle: UIAlertControllerStyle.alert)
-//        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.cancel, handler: cancelar))
-//        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: confirmaSalvar))
-//        self.present(alert, animated: true, completion: nil)
         confirmar(mensagem: "Deseja salvar a pessoa?", confirmado: confirmaSalvar, cancelado: cancelar)
     }
     
@@ -81,13 +80,14 @@ class ViewController: UIViewController,
     func confirmaSalvar(action: UIAlertAction) {
         debugPrint("Clicou no OK");
         
-        let pessoa = Pessoa(nome: name.text!, endereco: address.text!, telefone: telephone.text!, email: email.text!)
+        let pessoa = Pessoa(nome: name.text!, endereco: address.text!, telefone: telephone.text!, email: email.text!, operadora: operadora.text!)
         debugPrint(pessoa);
         
-        if (pessoa.Nome     != "" &&
-            pessoa.Endereco != "" &&
-            pessoa.Telefone != "" &&
-            pessoa.Email    != "")
+        if (pessoa.Nome         != "" &&
+            pessoa.Endereco     != "" &&
+            pessoa.Telefone     != "" &&
+            pessoa.Email        != "" &&
+            pessoa.Operadora    != "")
         {
             pessoas.append(pessoa);
             debugPrint(pessoas.count);
@@ -95,9 +95,6 @@ class ViewController: UIViewController,
             exibirMensagem(mensagem: "Deu certo!", titulo: "Novo título");
         }
         else {
-//            let alert = UIAlertController(title: "Atenção", message: "Todos os campos são obrigatórios. Tente novamente", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
             exibirMensagem(mensagem: "Todos os campos são obrigatórios")
         }
     }
@@ -106,8 +103,13 @@ class ViewController: UIViewController,
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let isOperadoraField = textField == operadora
         
-        operadoraPicker.isHidden = !isOperadoraField;
-        return !isOperadoraField;
+        if (isOperadoraField)
+        {
+            operadoraPicker.isHidden = !isOperadoraField;
+            return !isOperadoraField;
+        }
+        
+        return true;
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */; };
 		A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B8A101EC74FCE00757419 /* Pessoa.swift */; };
+		A5A9734F1ED9BCE8002EEBE2 /* TelaExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A9734E1ED9BCE8002EEBE2 /* TelaExtraViewController.swift */; };
 		A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD633F1EC2923A00C1C3E8 /* AppDelegate.swift */; };
 		A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FD63411EC2923A00C1C3E8 /* ViewController.swift */; };
 		A5FD63451EC2923A00C1C3E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FD63431EC2923A00C1C3E8 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A58B8A101EC74FCE00757419 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		A5A9734E1ED9BCE8002EEBE2 /* TelaExtraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TelaExtraViewController.swift; sourceTree = "<group>"; };
 		A5FD633C1EC2923A00C1C3E8 /* Pessoas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pessoas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FD633F1EC2923A00C1C3E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FD63411EC2923A00C1C3E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				A5FD634B1EC2923A00C1C3E8 /* Info.plist */,
 				A58B8A101EC74FCE00757419 /* Pessoa.swift */,
 				A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */,
+				A5A9734E1ED9BCE8002EEBE2 /* TelaExtraViewController.swift */,
 			);
 			path = Pessoas;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */,
 				A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */,
+				A5A9734F1ED9BCE8002EEBE2 /* TelaExtraViewController.swift in Sources */,
 				A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */,
 				A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */,
 			);

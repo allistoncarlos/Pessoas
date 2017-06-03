@@ -13,18 +13,21 @@ class Pessoa {
     var Endereco:       String;
     var Telefone:       String;
     var Email:          String;
+    var Operadora:      String;
     
     init() {
         Nome        = "";
         Endereco    = "";
         Telefone    = "";
         Email       = "";
+        Operadora   = "";
     }
     
-    init(nome: String, endereco: String, telefone: String, email: String) {
+    init(nome: String, endereco: String, telefone: String, email: String, operadora: String) {
         Nome        = nome;
         Endereco    = endereco;
         Telefone    = telefone;
         Email       = email
+        Operadora   = operadora;
     }
 }
