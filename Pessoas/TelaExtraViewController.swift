@@ -17,6 +17,7 @@ class TelaExtraViewController : UIViewController, UITextFieldDelegate {
     @IBOutlet weak var idadeLabel: UILabel!
     @IBOutlet weak var alturaStepper: UIStepper!
     @IBOutlet weak var alturaLabel: UILabel!
+    @IBOutlet weak var subscribe: UISwitch!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var progress: UIProgressView!
     
@@ -55,25 +56,27 @@ class TelaExtraViewController : UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func save(_ sender: Any) {
-//        var sexoText: String = "";
-//        
-//        switch sexo.selectedSegmentIndex {
-//            case 0:
-//                sexoText = "Masculino";
-//            case 1:
-//                sexoText = "Feminino";
-//            default:
-//                sexoText = "Outro";
-//        }
-//        
-//        exibirMensagem(mensagem: sexoText);
-
         activityIndicator.startAnimating();
         progress.setProgress(0, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.progress.setProgress(1, animated: true)
             self.activityIndicator.stopAnimating();
+            
+            self.subscribe.setOn(true, animated: true);
+            
+            var sexoText: String = "";
+    
+            switch self.sexo.selectedSegmentIndex {
+                case 0:
+                    sexoText = "Masculino";
+                case 1:
+                    sexoText = "Feminino";
+                default:
+                    sexoText = "Outro";
+            }
+            
+            self.exibirMensagem(mensagem: sexoText);
         }
     }
     

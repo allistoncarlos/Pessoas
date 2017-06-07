@@ -265,7 +265,7 @@
                                     <action selector="alturaChanged:" destination="Ryz-ES-P0h" eventType="valueChanged" id="9mE-12-NEI"/>
                                 </connections>
                             </stepper>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fze-9Y-yO1">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fze-9Y-yO1">
                                 <rect key="frame" x="310" y="323" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -290,6 +290,7 @@
                         <outlet property="nascimentoPicker" destination="Mh5-Mw-Plg" id="ZL4-qt-ocX"/>
                         <outlet property="progress" destination="GS0-eR-GMg" id="dhH-ze-yhy"/>
                         <outlet property="sexo" destination="QjB-uE-hXV" id="Lgg-KL-xX1"/>
+                        <outlet property="subscribe" destination="fze-9Y-yO1" id="RJ7-q3-g1q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jys-Z9-cdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
