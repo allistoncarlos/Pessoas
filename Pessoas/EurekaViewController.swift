@@ -16,7 +16,7 @@ class EurekaViewController: FormViewController {
     let operadoraRow        = PickerInputRow<String>();
     let emailRow            = EmailRow();
     let birthdayRow         = DateRow();
-    let sexRow              = SegmentedRow<String>()
+    let sexRow              = SegmentedRow<String>();
     let ageRow              = SliderRow();
     let heightRow           = SliderRow();
     let buttonRow           = ButtonRow();
@@ -79,10 +79,10 @@ class EurekaViewController: FormViewController {
         phoneRow.placeholder = "Digite seu telefone";
         
         let phoneRegex = RuleRegExp(regExpr: "^\\d{2} \\d{4}-\\d{4}$", allowsEmpty: false, msg: "Telefone deve estar no formato XX XXXX-XXXX")
-        phoneRow.add(rule: phoneRegex)
+        phoneRow.add(rule: phoneRegex);
         phoneRow.add(rule: RuleRequired(msg: "Campo Telefone obrigatório"));
-        phoneRow.onRowValidationChanged(phoneRowUpdate)
-        phoneRow.cellUpdate(phoneRowUpdate);
+        phoneRow.onRowValidationChanged(phoneRowValidate);
+        phoneRow.cellUpdate(phoneRowValidate);
         
         section.append(phoneRow);
     }
@@ -105,7 +105,9 @@ class EurekaViewController: FormViewController {
     func addBirthDate(section: Section) {
         birthdayRow.title = "Data de nascimento";
         birthdayRow.value = Date(timeIntervalSinceReferenceDate: 0);
-        birthdayRow.add(rule: RuleClosure<Date>(closure: dateRowValidate));
+        birthdayRow.add(rule: RuleClosure<Date>(closure: dateRowClosure));
+        birthdayRow.onRowValidationChanged(dateRowValidate);
+        birthdayRow.cellUpdate(dateRowValidate);
         
         section.append(birthdayRow);
     }
@@ -160,7 +162,7 @@ class EurekaViewController: FormViewController {
     }
     
     // Validações
-    func phoneRowUpdate(cell: PhoneCell, row: PhoneRow) {
+    func phoneRowValidate(cell: PhoneCell, row: PhoneRow) {
         if !row.isValid {
             cell.titleLabel?.textColor = .red
             
@@ -170,7 +172,7 @@ class EurekaViewController: FormViewController {
         }
     }
     
-    func dateRowValidate(rowValue: Date?) -> ValidationError? {
+    func dateRowClosure(rowValue: Date?) -> ValidationError? {
         if (rowValue == nil) {
             return ValidationError(msg: "Data de nascimento obrigatória");
         }
@@ -179,10 +181,10 @@ class EurekaViewController: FormViewController {
             return ValidationError(msg: "Data não pode ser maior que hoje");
         }
         
-        let maxDateString = "01/01/2005"
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd/MM/yyyy"
-        let maxDate = formatter.date(from: maxDateString)
+        let maxDateString = "01/01/2005";
+        let formatter = DateFormatter();
+        formatter.dateFormat = "dd/MM/yyyy";
+        let maxDate = formatter.date(from: maxDateString);
         
         if (rowValue! > maxDate!) {
             return ValidationError(msg: "A data de nascimento deve ser inferior a \(maxDateString)");
@@ -191,14 +193,21 @@ class EurekaViewController: FormViewController {
         return nil;
     }
     
+    func dateRowValidate(cell: DateCell, row: DateRow) {
+        if !row.isValid {
+            cell.textLabel?.textColor = .red;
+            
+            for error in row.validationErrors {
+                debugPrint(error.msg);
+            }
+        }
+    }
+    
     // Salvar
     func buttonClicked(cell: ButtonCellOf<String>, row: ButtonRow) {
         let errosFormulario = form.validate();
         
-        if (errosFormulario.count == 0) {
-            exibirMensagem(mensagem: "Formulário válido");
-        }
-        else {
+        if (errosFormulario.count != 0) {
             var mensagem = "";
             
             for error in errosFormulario {
@@ -206,6 +215,9 @@ class EurekaViewController: FormViewController {
             }
             
             exibirMensagem(mensagem: mensagem);
+        }
+        else {
+            exibirMensagem(mensagem: "Formulário válido");
         }
     }
 }
