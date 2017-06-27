@@ -6,5 +6,6 @@ target 'Pessoas' do
   use_frameworks!
 
   # Pods for Pessoas
+  pod 'ImageRow'
   pod 'Eureka'
 end

@@ -135,6 +135,7 @@
 				TargetAttributes = {
 					A5FD633B1EC2923A00C1C3E8 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = DLA5J5JEZ2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -354,6 +355,7 @@
 			baseConfigurationReference = D06CFED5349B7D208F618B23 /* Pods-Pessoas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DLA5J5JEZ2;
 				INFOPLIST_FILE = Pessoas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alliston.Pessoas;
@@ -367,6 +369,7 @@
 			baseConfigurationReference = F0B8585690E373B792D098EE /* Pods-Pessoas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DLA5J5JEZ2;
 				INFOPLIST_FILE = Pessoas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alliston.Pessoas;

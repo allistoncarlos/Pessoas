@@ -6,12 +6,14 @@
 //  Copyright © 2017 Alliston Aleixo. All rights reserved.
 //
 
+import ImageRow
 import Eureka
 import Foundation
 
 class EurekaViewController: FormViewController {
     let nameRow             = TextRow();
     let addressRow          = TextRow();
+    let profileRow          = ImageRow();
     let phoneRow            = PhoneRow();
     let operadoraRow        = PickerInputRow<String>();
     let emailRow            = EmailRow();
@@ -28,6 +30,7 @@ class EurekaViewController: FormViewController {
         let personalData = Section("Dados pessoais");
         addName(section: personalData);
         addAddress(section: personalData);
+        addProfile(section: personalData);
         form.append(personalData);
         
         // Contato
@@ -72,6 +75,14 @@ class EurekaViewController: FormViewController {
         addressRow.add(rule: RuleRequired(msg: "Campo Endereço obrigatório"));
         
         section.append(addressRow);
+    }
+    
+    func addProfile(section: Section) {
+        profileRow.title = "Imagem de Perfil";
+        profileRow.sourceTypes = .All;
+        profileRow.cellUpdate(imageSelected)
+        
+        section.append(profileRow);
     }
     
     func addPhone(section: Section) {
@@ -159,6 +170,11 @@ class EurekaViewController: FormViewController {
         }
         
         return String.init(format: "%.2f", value!);
+    }
+    
+    func imageSelected(cell: ImageCell, row: ImageRow) {
+        cell.accessoryView?.layer.cornerRadius = 17
+        cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
     }
     
     // Validações

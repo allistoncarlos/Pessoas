@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ImageRow.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Pessoas.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>37900E72EC972AF6ED5D988BD1F194A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>675A114988AE198732ED4AD726408964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA136C9FFB6BEAC775CBD5A849F3D7BD</key>
+		<key>E0244340444C64DC4494F5A0BF03198F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
