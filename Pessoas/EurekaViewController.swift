@@ -233,7 +233,11 @@ class EurekaViewController: FormViewController {
             exibirMensagem(mensagem: mensagem);
         }
         else {
-            exibirMensagem(mensagem: "Formulário válido");
+            let pessoa = Pessoa(nome: nameRow.value!, endereco: addressRow.value!, telefone: phoneRow.value!, email: emailRow.value!, operadora: operadoraRow.value!)
+            
+            AppDelegate.pessoas.append(pessoa);
+            
+            self.navigationController?.popViewController(animated: true);
         }
     }
 }

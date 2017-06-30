@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528D66A1F0684E600173A3B /* PessoasViewController.swift */; };
 		A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */; };
 		A569AEDF1EE987C300567FC3 /* EurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */; };
 		A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B8A101EC74FCE00757419 /* Pessoa.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A528D66A1F0684E600173A3B /* PessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoasViewController.swift; sourceTree = "<group>"; };
 		A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaViewController.swift; sourceTree = "<group>"; };
 		A58B8A101EC74FCE00757419 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */,
 				A5A9734E1ED9BCE8002EEBE2 /* TelaExtraViewController.swift */,
 				A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */,
+				A528D66A1F0684E600173A3B /* PessoasViewController.swift */,
 			);
 			path = Pessoas;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */,
 				A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */,
 				A5A9734F1ED9BCE8002EEBE2 /* TelaExtraViewController.swift in Sources */,
+				A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */,
 				A569AEDF1EE987C300567FC3 /* EurekaViewController.swift in Sources */,
 				A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */,
 				A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */,
