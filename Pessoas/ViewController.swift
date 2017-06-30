@@ -80,23 +80,23 @@ class ViewController: UIViewController,
     func confirmaSalvar(action: UIAlertAction) {
         debugPrint("Clicou no OK");
         
-        let pessoa = Pessoa(nome: name.text!, endereco: address.text!, telefone: telephone.text!, email: email.text!, operadora: operadora.text!)
-        debugPrint(pessoa);
-        
-        if (pessoa.Nome         != "" &&
-            pessoa.Endereco     != "" &&
-            pessoa.Telefone     != "" &&
-            pessoa.Email        != "" &&
-            pessoa.Operadora    != "")
-        {
-            pessoas.append(pessoa);
-            debugPrint(pessoas.count);
-            
-            exibirMensagem(mensagem: "Deu certo!", titulo: "Novo título");
-        }
-        else {
-            exibirMensagem(mensagem: "Todos os campos são obrigatórios")
-        }
+//        let pessoa = Pessoa(nome: name.text!, endereco: address.text!, telefone: telephone.text!, email: email.text!, operadora: operadora.text!)
+//        debugPrint(pessoa);
+//        
+//        if (pessoa.Nome         != "" &&
+//            pessoa.Endereco     != "" &&
+//            pessoa.Telefone     != "" &&
+//            pessoa.Email        != "" &&
+//            pessoa.Operadora    != "")
+//        {
+//            pessoas.append(pessoa);
+//            debugPrint(pessoas.count);
+//            
+//            exibirMensagem(mensagem: "Deu certo!", titulo: "Novo título");
+//        }
+//        else {
+//            exibirMensagem(mensagem: "Todos os campos são obrigatórios")
+//        }
     }
     
     // MARK: - TextField Events

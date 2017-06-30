@@ -233,7 +233,17 @@ class EurekaViewController: FormViewController {
             exibirMensagem(mensagem: mensagem);
         }
         else {
-            let pessoa = Pessoa(nome: nameRow.value!, endereco: addressRow.value!, telefone: phoneRow.value!, email: emailRow.value!, operadora: operadoraRow.value!)
+            let pessoa = Pessoa(
+                nome:       nameRow.value!,
+                endereco:   addressRow.value!,
+                telefone:   phoneRow.value!,
+                email:      emailRow.value!,
+                operadora:  operadoraRow.value!,
+                imagem:     profileRow.value!,
+                nascimento: birthdayRow.value!,
+                sexo:       sexRow.value!,
+                idade:      Int(ageRow.value!),
+                altura:     heightRow.value!)
             
             AppDelegate.pessoas.append(pessoa);
             

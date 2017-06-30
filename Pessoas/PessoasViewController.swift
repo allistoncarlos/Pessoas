@@ -36,6 +36,7 @@ class PessoasViewController : UITableViewController {
         let pessoa = AppDelegate.pessoas[indexPath.row];
         
         cell.textLabel?.text = pessoa.Nome
+        cell.detailTextLabel?.text = pessoa.Email
         
         return cell
     }
