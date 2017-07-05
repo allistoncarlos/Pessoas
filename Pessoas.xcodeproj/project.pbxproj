@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528D66A1F0684E600173A3B /* PessoasViewController.swift */; };
+		A535D10C1F0D14AE00156AEE /* PessoaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A535D10B1F0D14AE00156AEE /* PessoaCell.xib */; };
+		A535D10E1F0D161100156AEE /* PessoaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D10D1F0D161100156AEE /* PessoaCell.swift */; };
 		A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */; };
 		A569AEDF1EE987C300567FC3 /* EurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */; };
 		A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B8A101EC74FCE00757419 /* Pessoa.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		A528D66A1F0684E600173A3B /* PessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoasViewController.swift; sourceTree = "<group>"; };
+		A535D10B1F0D14AE00156AEE /* PessoaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PessoaCell.xib; sourceTree = "<group>"; };
+		A535D10D1F0D161100156AEE /* PessoaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoaCell.swift; sourceTree = "<group>"; };
 		A53650061ED06E6D00CE34C3 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaViewController.swift; sourceTree = "<group>"; };
 		A58B8A101EC74FCE00757419 /* Pessoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A535D10A1F0D149B00156AEE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A535D10B1F0D14AE00156AEE /* PessoaCell.xib */,
+				A535D10D1F0D161100156AEE /* PessoaCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		A5FD63331EC2923A00C1C3E8 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +101,7 @@
 		A5FD633E1EC2923A00C1C3E8 /* Pessoas */ = {
 			isa = PBXGroup;
 			children = (
+				A535D10A1F0D149B00156AEE /* Cells */,
 				A5FD633F1EC2923A00C1C3E8 /* AppDelegate.swift */,
 				A5FD63411EC2923A00C1C3E8 /* ViewController.swift */,
 				A5FD63431EC2923A00C1C3E8 /* Main.storyboard */,
@@ -168,6 +182,7 @@
 			files = (
 				A5FD634A1EC2923A00C1C3E8 /* LaunchScreen.storyboard in Resources */,
 				A5FD63471EC2923A00C1C3E8 /* Assets.xcassets in Resources */,
+				A535D10C1F0D14AE00156AEE /* PessoaCell.xib in Resources */,
 				A5FD63451EC2923A00C1C3E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +248,7 @@
 				A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */,
 				A569AEDF1EE987C300567FC3 /* EurekaViewController.swift in Sources */,
 				A58B8A111EC74FCE00757419 /* Pessoa.swift in Sources */,
+				A535D10E1F0D161100156AEE /* PessoaCell.swift in Sources */,
 				A5FD63401EC2923A00C1C3E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
