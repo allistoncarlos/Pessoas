@@ -14,4 +14,9 @@ class PessoaCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var operadora: UILabel!
+    
+    override func awakeFromNib() {
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        profileImage.clipsToBounds = true
+    }
 }

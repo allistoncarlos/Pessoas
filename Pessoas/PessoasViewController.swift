@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 
 class PessoasViewController : UITableViewController {
+    var operadoras: [String] = [String]();
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -25,17 +27,26 @@ class PessoasViewController : UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        operadoras = AppDelegate.pessoas.group { $0.Operadora }.map { $0[0].Operadora }
+        operadoras = operadoras.sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+        
+        return operadoras.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppDelegate.pessoas.count
+        let operadora = operadoras[section];
+        
+        let pessoas = AppDelegate.pessoas.filter { $0.Operadora == operadora };
+        
+        return pessoas.count;
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "PessoaCell") as! PessoaCell;
         
-        let pessoa = AppDelegate.pessoas[indexPath.row];
+        let operadora = operadoras[indexPath.section];
+        let pessoasOperadora = AppDelegate.pessoas.filter { $0.Operadora == operadora };
+        let pessoa = pessoasOperadora[indexPath.row];
         
         cell.name.text = pessoa.Nome;
         cell.email.text = pessoa.Email;
@@ -46,7 +57,7 @@ class PessoasViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Section \(section)"
+        return operadoras[section];
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -56,6 +67,6 @@ class PessoasViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 95
+        return 95;
     }
 }
