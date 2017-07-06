@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 
 class Pessoa {
+    var Id:             Int;
     var Nome:           String;
     var Endereco:       String;
     var Imagem:         UIImage;
@@ -21,12 +22,9 @@ class Pessoa {
     var Idade:          Int;
     var Altura:         Float;
     
-    /*
-     let heightRow           = SliderRow();
-     let buttonRow           = ButtonRow();
-     */
-    
     init() {
+        Id          = Pessoa.getId();
+        
         Nome        = "";
         Endereco    = "";
         Imagem      = UIImage();
@@ -49,6 +47,8 @@ class Pessoa {
          sexo: String,
          idade: Int,
          altura: Float) {
+        Id          = Pessoa.getId();
+        
         Nome        = nome;
         Endereco    = endereco;
         Imagem      = imagem;
@@ -59,5 +59,15 @@ class Pessoa {
         Sexo        = sexo;
         Idade       = idade;
         Altura      = altura;
+    }
+    
+    private static func getId() -> Int {
+        let totalPessoas = AppDelegate.pessoas.count;
+        
+        if (totalPessoas == 0) {
+            return 1;
+        }
+        
+        return AppDelegate.pessoas.map { $0.Id }.max()! + 1;
     }
 }

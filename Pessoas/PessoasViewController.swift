@@ -44,9 +44,7 @@ class PessoasViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "PessoaCell") as! PessoaCell;
         
-        let operadora = operadoras[indexPath.section];
-        let pessoasOperadora = AppDelegate.pessoas.filter { $0.Operadora == operadora };
-        let pessoa = pessoasOperadora[indexPath.row];
+        let pessoa = getPessoa(indexPath: indexPath)
         
         cell.name.text = pessoa.Nome;
         cell.email.text = pessoa.Email;
@@ -62,11 +60,21 @@ class PessoasViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            let pessoaDelete = getPessoa(indexPath: indexPath);
             
+            AppDelegate.pessoas = AppDelegate.pessoas.filter { $0.Id != pessoaDelete.Id };
+            self.tableView.reloadData();
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 95;
+    }
+    
+    // MARK: - Private Methods
+    private func getPessoa(indexPath: IndexPath) -> Pessoa {
+        let operadora = operadoras[indexPath.section];
+        let pessoasOperadora = AppDelegate.pessoas.filter { $0.Operadora == operadora };
+        return pessoasOperadora[indexPath.row];
     }
 }
