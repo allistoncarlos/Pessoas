@@ -335,8 +335,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="fC3-f8-pez" kind="show" identifier="PessoaSegue" id="XXu-b5-ZAt">
-                                        <segue key="commit" inheritsFrom="parent" id="HYI-1I-1Fr"/>
-                                        <segue key="preview" inheritsFrom="commit" id="zma-Q2-aKG"/>
+                                        <segue key="commit" inheritsFrom="parent" id="Uj6-jg-KKn"/>
+                                        <segue key="preview" inheritsFrom="commit" id="cFS-rb-Pxh"/>
                                     </segue>
                                 </connections>
                             </tableViewCell>

@@ -58,6 +58,25 @@ class PessoasViewController : UITableViewController {
         return operadoras[section];
     }
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let more = UITableViewRowAction(style: .normal, title: "Mais") { action, index in
+            print("Tocado em 'Mais'")
+        }
+        more.backgroundColor = .lightGray
+        
+        let favorite = UITableViewRowAction(style: .normal, title: "Favoritar") { action, index in
+            print("Tocado em 'Favorito'")
+        }
+        favorite.backgroundColor = .orange
+        
+        let share = UITableViewRowAction(style: .normal, title: "Compartilhar") { action, index in
+            print("Tocado em 'compartilhado'")
+        }
+        share.backgroundColor = .blue
+        
+        return [share, favorite, more]
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let pessoaDelete = getPessoa(indexPath: indexPath);
