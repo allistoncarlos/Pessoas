@@ -100,7 +100,7 @@ class EurekaViewController: FormViewController {
     
     func addOperadora(section: Section) {
         operadoraRow.title = "Operadora";
-        operadoraRow.options = [ "Claro", "Oi", "Vivo", "Tim" ];
+        operadoraRow.options = AppDelegate.operadoras.map { $0.Nome };
         
         section.append(operadoraRow);
     }

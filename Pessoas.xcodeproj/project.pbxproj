@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528D66A1F0684E600173A3B /* PessoasViewController.swift */; };
+		A52E0F361F34B20E00DAF9FD /* Operadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E0F351F34B20E00DAF9FD /* Operadora.swift */; };
+		A52E0F381F34B26900DAF9FD /* OperadorasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E0F371F34B26900DAF9FD /* OperadorasViewController.swift */; };
+		A52E0F3A1F34B41F00DAF9FD /* OperadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52E0F391F34B41F00DAF9FD /* OperadoraViewController.swift */; };
 		A535D10C1F0D14AE00156AEE /* PessoaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A535D10B1F0D14AE00156AEE /* PessoaCell.xib */; };
 		A535D10E1F0D161100156AEE /* PessoaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D10D1F0D161100156AEE /* PessoaCell.swift */; };
 		A535D1101F0D206200156AEE /* ListExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A535D10F1F0D206200156AEE /* ListExtensions.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		A528D66A1F0684E600173A3B /* PessoasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoasViewController.swift; sourceTree = "<group>"; };
+		A52E0F351F34B20E00DAF9FD /* Operadora.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operadora.swift; sourceTree = "<group>"; };
+		A52E0F371F34B26900DAF9FD /* OperadorasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperadorasViewController.swift; sourceTree = "<group>"; };
+		A52E0F391F34B41F00DAF9FD /* OperadoraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperadoraViewController.swift; sourceTree = "<group>"; };
 		A535D10B1F0D14AE00156AEE /* PessoaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PessoaCell.xib; sourceTree = "<group>"; };
 		A535D10D1F0D161100156AEE /* PessoaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PessoaCell.swift; sourceTree = "<group>"; };
 		A535D10F1F0D206200156AEE /* ListExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListExtensions.swift; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 				A569AEDE1EE987C300567FC3 /* EurekaViewController.swift */,
 				A528D66A1F0684E600173A3B /* PessoasViewController.swift */,
 				A535D10F1F0D206200156AEE /* ListExtensions.swift */,
+				A52E0F351F34B20E00DAF9FD /* Operadora.swift */,
+				A52E0F371F34B26900DAF9FD /* OperadorasViewController.swift */,
+				A52E0F391F34B41F00DAF9FD /* OperadoraViewController.swift */,
 			);
 			path = Pessoas;
 			sourceTree = "<group>";
@@ -245,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A52E0F3A1F34B41F00DAF9FD /* OperadoraViewController.swift in Sources */,
 				A53650071ED06E6D00CE34C3 /* UIViewControllerExtensions.swift in Sources */,
 				A5FD63421EC2923A00C1C3E8 /* ViewController.swift in Sources */,
 				A5A9734F1ED9BCE8002EEBE2 /* TelaExtraViewController.swift in Sources */,
+				A52E0F361F34B20E00DAF9FD /* Operadora.swift in Sources */,
+				A52E0F381F34B26900DAF9FD /* OperadorasViewController.swift in Sources */,
 				A535D1101F0D206200156AEE /* ListExtensions.swift in Sources */,
 				A528D66B1F0684E600173A3B /* PessoasViewController.swift in Sources */,
 				A569AEDF1EE987C300567FC3 /* EurekaViewController.swift in Sources */,
